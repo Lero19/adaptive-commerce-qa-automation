@@ -13,7 +13,6 @@ import {
   BrowserType
 } from '@playwright/test';
 
-import * as allure from 'allure-js-commons';
 import { environment } from '../../config/environment';
 import { CustomWorld } from './world';
 
@@ -35,6 +34,9 @@ const browserTypes: Record<string, BrowserType> = {
 
 let sharedBrowser: Awaited<ReturnType<BrowserType['launch']>>;
 
+// Window maximizing only works for headed Chromium. Everything else gets a fixed viewport.
+const maximizeWindow = !environment.headless && environment.browser === 'chromium';
+
 BeforeAll(async function () {
   fs.mkdirSync('reports', { recursive: true });
 
@@ -48,36 +50,27 @@ BeforeAll(async function () {
 
   sharedBrowser = await type.launch({
     headless: environment.headless,
-    args: ['--start-maximized']
+    args: maximizeWindow ? ['--start-maximized'] : []
   });
 });
 
 Before(async function (this: CustomWorld, scenario) {
-  const tags = scenario.pickle.tags.map(tag =>
-    tag.name.replace(/^@/, '')
-  );
-
   this.scenarioId = scenario.pickle.name
     .replace(/[^a-z0-9]+/gi, '-')
     .toLowerCase();
 
-  // Assign explicit Allure suite labels from Cucumber tags.
-  if (tags.includes('registration')) {
-    await allure.parentSuite('Web Shop');
-    await allure.suite('Registration');
-    await allure.subSuite('Customer Registration');
-  } else if (tags.includes('password-recovery')) {
-    await allure.parentSuite('Web Shop');
-    await allure.suite('Authentication');
-    await allure.subSuite('Password Recovery');
-  } else if (tags.includes('authentication') || tags.includes('login')) {
-    await allure.parentSuite('Web Shop');
-    await allure.suite('Authentication');
-    await allure.subSuite('Login');
-  }
+  // Allure suite labels now come from feature tags (@allure.label.suite:... etc.),
+  // so no Allure runtime calls are needed here.
 
   this.browser = sharedBrowser;
-  this.context = await this.browser.newContext();
+
+  // viewport: null lets the page fill the maximized window.
+  // Playwright's default 1280x720 viewport would otherwise override --start-maximized.
+  this.context = await this.browser.newContext({
+    viewport: maximizeWindow
+      ? null
+      : { width: environment.viewportWidth, height: environment.viewportHeight }
+  });
   this.page = await this.context.newPage();
 
   this.page.setDefaultTimeout(environment.defaultTimeoutMs);

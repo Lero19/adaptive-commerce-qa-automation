@@ -9,7 +9,6 @@ const common = {
     'progress',
     'json:reports/cucumber-report.json'
   ],
-  publishQuiet: true,
   parallel: 1
 };
 

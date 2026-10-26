@@ -16,6 +16,7 @@
   "include": [
     "config/**/*.ts",
     "features/**/*.ts",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "utils/**/*.ts"
   ]
 }
