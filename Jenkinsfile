@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -51,14 +50,37 @@ pipeline {
             }
         }
 
-        stage('Registration Test') {
+        stage('Clean Allure Results') {
             steps {
-                bat 'npm run test:registration'
+                bat 'npm run clean:allure'
             }
         }
+
+        stage('Registration Test') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'testuser',
+                        usernameVariable: 'TEST_USER_EMAIL',
+                        passwordVariable: 'TEST_USER_PASSWORD'
+                    )
+                ]) {
+                    bat 'npm run test:registration'
+                }
+            }
+        }
+
         stage('Login & Authentication Tests') {
             steps {
-                bat 'npm run test:login'
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'testuser',
+                        usernameVariable: 'TEST_USER_EMAIL',
+                        passwordVariable: 'TEST_USER_PASSWORD'
+                    )
+                ]) {
+                    bat 'npm run test:login'
+                }
             }
         }
     }
@@ -94,11 +116,11 @@ pipeline {
         }
 
         success {
-            echo 'Registration automation passed.'
+            echo 'Registration and authentication automation passed.'
         }
 
         failure {
-            echo 'Registration automation failed. Check the console output and archived results.'
+            echo 'Automation failed. Check the console output and archived results.'
         }
     }
 }
