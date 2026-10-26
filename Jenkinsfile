@@ -67,6 +67,15 @@ pipeline {
                     } catch (err) {
                         echo "Allure report generation failed: ${err}"
                     }
+
+                    try {
+                        allure([
+                            includeProperties: false,
+                            results: [[path: 'allure-results']]
+                        ])
+                    } catch (err) {
+                        echo "Allure publishing failed: ${err}"
+                    }
                 } else {
                     echo 'No Allure results were generated.'
                 }
