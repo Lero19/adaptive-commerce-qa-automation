@@ -98,3 +98,27 @@ The starter includes registration happy-path and negative scenarios. It does not
 ## Suggested LinkedIn demo
 
 Show the architecture, one readable Gherkin scenario, a short browser run, and a real healing event from the report. Distinguish fallback recovery from AI-generated locators and publish only metrics collected from real executions.
+
+
+## Branching Strategy
+
+- `main`: Development and QA automation changes.
+- `demowebshop.prod`: Production-approved automation code.
+- Pull requests are used to promote changes from `main` to `demowebshop.prod`.
+
+## Test Automation Stack
+
+- Playwright
+- TypeScript
+- Cucumber.js
+- Allure Reports
+
+## Test Execution
+
+Run the project's configured test command to execute the automated test suite.
+
+Generate an Allure report after test execution using:
+
+```powershell
+npx allure generate allure-results --clean -o allure-report
+npx allure open allure-report

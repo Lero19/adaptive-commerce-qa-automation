@@ -5,6 +5,7 @@ import { CustomWorld } from './world';
 const { RegisterPage } = require('../../src/pages/register.page');
 const { LoginPage } = require('../../src/pages/login.page');
 const { HomePage } = require('../../src/pages/home.page');
+const { PasswordRecoveryPage } = require('../../src/pages/password-recovery-page');
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -31,6 +32,7 @@ Before(async function (this: CustomWorld, scenario) {
   this.registerPage = new RegisterPage(this.page, this.healingReporter);
   this.loginPage = new LoginPage(this.page, this.healingReporter);
   this.homePage = new HomePage(this.page, this.healingReporter);
+  this.passwordRecoveryPage = new PasswordRecoveryPage(this.page, this.healingReporter);
 });
 
 

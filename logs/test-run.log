@@ -1032,3 +1032,312 @@
 2026-10-26 17:54:05.244 [INFO ] [RegisterPage] Verifying validation message: "The password and confirmation password do not match."
 2026-10-26 17:54:05.275 [INFO ] [RegisterPage] Validation message verified: "The password and confirmation password do not match."
 2026-10-26 17:54:05.276 [INFO ] [Hooks] END: Reject mismatched passwords {"status":"PASSED"}
+2026-10-26 19:52:06.750 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 19:52:06.758 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:52:09.959 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 19:52:10.683 [INFO ] [LoginPage] Entering login email {"email":"leroylunaticsane10@gmail.com"}
+2026-10-26 19:52:10.937 [INFO ] [LoginPage] Submitting login form
+2026-10-26 19:52:11.563 [INFO ] [LoginPage] Verifying logged-in account {"email":"leroylunaticsane10@gmail.com"}
+2026-10-26 19:52:26.621 [INFO ] [Hooks] FAILED: Grant account access to a registered customer with valid credentials {"status":"FAILED"}
+2026-10-26 19:52:26.623 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.header-links a.account[href="/customer/info"]') | Expected: visible | Timeout: 15000ms | Error: element(s) not found
+2026-10-26 19:52:26.844 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 19:52:27.696 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 19:52:27.698 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:52:30.320 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 19:52:30.985 [INFO ] [LoginPage] Entering login email {"email":"leroylunaticsane10@gmail.com"}
+2026-10-26 19:52:31.243 [INFO ] [LoginPage] Submitting login form
+2026-10-26 19:52:31.872 [INFO ] [Hooks] FAILED: Protect customer accounts against invalid authentication attempts {"status":"FAILED"}
+2026-10-26 19:52:31.874 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.validation-summary-errors, .message-error') | Expected: visible | Error: strict mode violation: locator('.validation-summary-errors, .message-error') resolved to 2 elements: |     1) <div class="message-error">…</div> aka locator('.message-error')
+2026-10-26 19:52:32.003 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 19:52:32.641 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 19:52:32.643 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:52:35.549 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 19:52:36.333 [INFO ] [LoginPage] Entering login email {"email":"leroylunaticsane10@gmail.com"}
+2026-10-26 19:52:36.599 [INFO ] [LoginPage] Submitting login form
+2026-10-26 19:52:37.161 [INFO ] [Hooks] FAILED: Protect customer accounts against invalid authentication attempts {"status":"FAILED"}
+2026-10-26 19:52:37.162 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.validation-summary-errors, .message-error') | Expected: visible | Error: strict mode violation: locator('.validation-summary-errors, .message-error') resolved to 2 elements: |     1) <div class="message-error">…</div> aka locator('.message-error')
+2026-10-26 19:52:37.280 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 19:52:37.977 [INFO ] [Scenario] START: Allow a customer to access the password recovery process
+2026-10-26 19:52:37.979 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:52:40.502 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 19:52:41.802 [INFO ] [Hooks] FAILED: Allow a customer to access the password recovery process {"status":"FAILED"}
+2026-10-26 19:52:41.804 [ERROR] [Hooks] Reason: TypeError: Cannot read properties of undefined (reading 'expectOnRecoveryPage') |     at CustomWorld.<anonymous> (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\features\login\login.steps.ts:97:37)
+2026-10-26 19:52:41.930 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/passwordrecovery"}
+2026-10-26 19:52:42.415 [INFO ] [Scenario] START: Submit a password recovery request for a registered customer
+2026-10-26 19:52:42.417 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:52:44.903 [WARN ] [ResilientLocator] "Forgot password link" via css: not found (count=0), trying next strategy
+2026-10-26 19:52:44.930 [WARN ] [ResilientLocator] "Forgot password link" via role: not found (count=0), trying next strategy
+2026-10-26 19:52:44.933 [ERROR] [ResilientLocator] "Forgot password link" could not be resolved by any of 2 strategies
+2026-10-26 19:52:44.937 [INFO ] [Hooks] FAILED: Submit a password recovery request for a registered customer {"status":"FAILED"}
+2026-10-26 19:52:44.939 [ERROR] [Hooks] Reason: Error: No unique, visible and enabled locator found for "Forgot password link". |     at findResilient (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\src\resilience\resilient-locator.ts:104:9) |     at async LoginPage.openPasswordRecovery (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\src\pages\login.page.ts:160:26) |     at async CustomWorld.<anonymous> (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\features\login\login.steps.ts:113:5)
+2026-10-26 19:52:45.125 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/"}
+2026-10-26 19:54:10.791 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 19:54:10.808 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:54:35.244 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 19:54:36.291 [INFO ] [LoginPage] Entering login email {"email":"leroylunaticsane10@gmail.com"}
+2026-10-26 19:54:36.626 [INFO ] [LoginPage] Submitting login form
+2026-10-26 19:54:37.087 [INFO ] [LoginPage] Verifying logged-in account {"email":"leroylunaticsane10@gmail.com"}
+2026-10-26 19:54:52.135 [INFO ] [Hooks] FAILED: Grant account access to a registered customer with valid credentials {"status":"FAILED"}
+2026-10-26 19:54:52.136 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.header-links a.account[href="/customer/info"]') | Expected: visible | Timeout: 15000ms | Error: element(s) not found
+2026-10-26 19:54:52.537 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 19:54:53.680 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 19:54:53.684 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:56:40.222 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 19:56:40.242 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:57:03.465 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 19:57:04.242 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 19:57:04.600 [INFO ] [LoginPage] Submitting login form
+2026-10-26 19:57:05.159 [INFO ] [LoginPage] Verifying logged-in account {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 19:57:20.198 [INFO ] [Hooks] FAILED: Grant account access to a registered customer with valid credentials {"status":"FAILED"}
+2026-10-26 19:57:20.201 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.header-links a.account[href="/customer/info"]') | Expected: visible | Timeout: 15000ms | Error: element(s) not found
+2026-10-26 19:57:20.468 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 19:57:21.860 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 19:57:21.864 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:59:02.136 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 19:59:02.152 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 19:59:25.736 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 19:59:26.487 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 19:59:26.832 [INFO ] [LoginPage] Submitting login form
+2026-10-26 19:59:27.496 [INFO ] [LoginPage] Verifying logged-in account {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:02:32.593 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:02:32.611 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:02:56.835 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:02:57.808 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:02:57.896 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:02:57.984 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:02:58.126 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:02:58.755 [INFO ] [LoginPage] Verifying logged-in account {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:03:13.815 [INFO ] [Hooks] FAILED: Grant account access to a registered customer with valid credentials {"status":"FAILED"}
+2026-10-26 20:03:13.819 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.header-links a.account[href="/customer/info"]') | Expected: visible | Timeout: 15000ms | Error: element(s) not found
+2026-10-26 20:03:14.097 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 20:03:15.742 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:03:15.747 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:05:47.327 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:05:47.351 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:06:10.701 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:06:12.622 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:06:12.701 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:06:12.770 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:06:12.906 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:06:13.548 [INFO ] [LoginPage] Verifying logged-in account {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:10:31.803 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:10:31.823 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:10:55.023 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:10:55.895 [INFO ] [LoginPage] Login attempt {"attempt":1}
+2026-10-26 20:10:56.106 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:10:56.184 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:10:56.265 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:10:56.394 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:11:01.987 [WARN ] [LoginPage] Login not confirmed; retrying once {"attempt":1}
+2026-10-26 20:11:01.990 [INFO ] [LoginPage] Opening login page
+2026-10-26 20:11:02.660 [INFO ] [LoginPage] Login attempt {"attempt":2}
+2026-10-26 20:11:02.823 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:11:02.899 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:11:02.973 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:11:03.095 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:11:08.744 [INFO ] [Hooks] FAILED: Grant account access to a registered customer with valid credentials {"status":"FAILED"}
+2026-10-26 20:11:08.746 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.header-links a.account[href="/customer/info"]') | Expected: visible | Timeout: 5000ms | Error: element(s) not found
+2026-10-26 20:11:09.037 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 20:11:10.640 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:11:10.643 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:16:27.566 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:16:27.584 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:16:51.264 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:16:52.093 [INFO ] [LoginPage] Login attempt {"attempt":1}
+2026-10-26 20:16:52.303 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:16:52.391 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:16:52.465 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:16:52.593 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:16:58.174 [WARN ] [LoginPage] Login not confirmed; retrying once {"attempt":1}
+2026-10-26 20:16:58.177 [INFO ] [LoginPage] Opening login page
+2026-10-26 20:16:59.003 [INFO ] [LoginPage] Login attempt {"attempt":2}
+2026-10-26 20:16:59.218 [INFO ] [LoginPage] Entering login email {"email":"Leroylunaticsane10@gmail.com"}
+2026-10-26 20:16:59.292 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:16:59.365 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:16:59.512 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:17:05.201 [INFO ] [Hooks] FAILED: Grant account access to a registered customer with valid credentials {"status":"FAILED"}
+2026-10-26 20:17:05.205 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.header-links a.account[href="/customer/info"]') | Expected: visible | Timeout: 5000ms | Error: element(s) not found
+2026-10-26 20:17:05.478 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 20:17:07.111 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:17:07.115 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:23:26.138 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:23:26.153 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:23:49.531 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:23:50.515 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:23:50.624 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:23:50.701 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:23:50.833 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:23:51.689 [INFO ] [LoginPage] Verifying logged-in account {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:23:51.890 [INFO ] [Hooks] END: Grant account access to a registered customer with valid credentials {"status":"PASSED"}
+2026-10-26 20:23:53.031 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:23:53.034 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:24:16.006 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:24:16.931 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:24:17.011 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:24:17.096 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:24:17.264 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:24:17.963 [INFO ] [Hooks] FAILED: Protect customer accounts against invalid authentication attempts {"status":"FAILED"}
+2026-10-26 20:24:17.965 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.validation-summary-errors, .message-error') | Expected: visible | Error: strict mode violation: locator('.validation-summary-errors, .message-error') resolved to 2 elements: |     1) <div class="message-error">…</div> aka locator('.message-error')
+2026-10-26 20:24:18.185 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 20:24:19.341 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:24:19.345 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:24:43.612 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:24:44.859 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:24:44.931 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:24:45.002 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:24:45.133 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:24:45.857 [INFO ] [Hooks] FAILED: Protect customer accounts against invalid authentication attempts {"status":"FAILED"}
+2026-10-26 20:24:45.860 [ERROR] [Hooks] Reason: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed |  | Locator: locator('.validation-summary-errors, .message-error') | Expected: visible | Error: strict mode violation: locator('.validation-summary-errors, .message-error') resolved to 2 elements: |     1) <div class="message-error">…</div> aka locator('.message-error')
+2026-10-26 20:24:46.058 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/login"}
+2026-10-26 20:24:47.222 [INFO ] [Scenario] START: Allow a customer to access the password recovery process
+2026-10-26 20:24:47.225 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:25:11.483 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:25:14.012 [INFO ] [Hooks] FAILED: Allow a customer to access the password recovery process {"status":"FAILED"}
+2026-10-26 20:25:14.014 [ERROR] [Hooks] Reason: TypeError: Cannot read properties of undefined (reading 'expectOnRecoveryPage') |     at CustomWorld.<anonymous> (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\features\login\login.steps.ts:97:37)
+2026-10-26 20:25:14.188 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/passwordrecovery"}
+2026-10-26 20:25:15.238 [INFO ] [Scenario] START: Submit a password recovery request for a registered customer
+2026-10-26 20:25:15.242 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:25:38.755 [WARN ] [ResilientLocator] "Forgot password link" via css: not found (count=0), trying next strategy
+2026-10-26 20:25:38.791 [WARN ] [ResilientLocator] "Forgot password link" via role: not found (count=0), trying next strategy
+2026-10-26 20:25:38.794 [ERROR] [ResilientLocator] "Forgot password link" could not be resolved by any of 2 strategies
+2026-10-26 20:25:38.800 [INFO ] [Hooks] FAILED: Submit a password recovery request for a registered customer {"status":"FAILED"}
+2026-10-26 20:25:38.803 [ERROR] [Hooks] Reason: Error: No unique, visible and enabled locator found for "Forgot password link". |     at findResilient (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\src\resilience\resilient-locator.ts:104:9) |     at runNextTicks (node:internal/process/task_queues:65:5) |     at processImmediate (node:internal/timers:472:9) |     at async LoginPage.openPasswordRecovery (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\src\pages\login.page.ts:171:26) |     at async CustomWorld.<anonymous> (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\features\login\login.steps.ts:113:5)
+2026-10-26 20:25:39.030 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/"}
+2026-10-26 20:30:38.358 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:30:38.376 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:31:04.553 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:31:05.580 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:31:05.663 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:31:05.737 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:31:05.877 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:31:07.046 [INFO ] [LoginPage] Verifying logged-in account {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:31:07.197 [INFO ] [Hooks] END: Grant account access to a registered customer with valid credentials {"status":"PASSED"}
+2026-10-26 20:31:08.448 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:31:08.452 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:31:35.688 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:31:36.660 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:31:36.741 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:31:36.828 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:31:37.018 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:31:37.807 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:31:38.713 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:31:38.717 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:32:05.483 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:32:09.470 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:32:09.559 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:32:09.660 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:32:09.763 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:32:10.849 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:32:11.858 [INFO ] [Scenario] START: Allow a customer to access the password recovery process
+2026-10-26 20:32:11.861 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:32:55.361 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:32:58.981 [INFO ] [Hooks] END: Allow a customer to access the password recovery process {"status":"UNDEFINED"}
+2026-10-26 20:32:59.884 [INFO ] [Scenario] START: Submit a password recovery request for a registered customer
+2026-10-26 20:32:59.887 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:33:39.972 [INFO ] [Hooks] END: Submit a password recovery request for a registered customer {"status":"AMBIGUOUS"}
+2026-10-26 20:37:34.371 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:37:34.383 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:38:00.209 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:38:01.554 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:38:01.624 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:38:01.693 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:38:01.817 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:38:02.913 [INFO ] [LoginPage] Verifying logged-in account {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:38:03.077 [INFO ] [Hooks] END: Grant account access to a registered customer with valid credentials {"status":"PASSED"}
+2026-10-26 20:38:04.196 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:38:04.199 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:38:27.866 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:38:28.944 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:38:29.018 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:38:29.087 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:38:29.249 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:38:29.972 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:38:30.852 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:38:30.871 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:38:54.389 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:38:55.260 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:38:55.333 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:38:55.396 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:38:55.566 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:38:56.222 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:38:57.139 [INFO ] [Scenario] START: Allow a customer to access the password recovery process
+2026-10-26 20:38:57.142 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:39:20.738 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:39:21.499 [INFO ] [Hooks] END: Allow a customer to access the password recovery process {"status":"UNDEFINED"}
+2026-10-26 20:39:22.399 [INFO ] [Scenario] START: Submit a password recovery request for a registered customer
+2026-10-26 20:39:22.402 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:39:46.148 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:39:47.602 [INFO ] [Hooks] FAILED: Submit a password recovery request for a registered customer {"status":"FAILED"}
+2026-10-26 20:39:47.605 [ERROR] [Hooks] Reason: TypeError: Cannot read properties of undefined (reading 'expectOnRecoveryPage') |     at CustomWorld.<anonymous> (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\features\login\login.steps.ts:91:37)
+2026-10-26 20:39:47.811 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/passwordrecovery"}
+2026-10-26 20:45:05.276 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:45:05.304 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:45:28.252 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:45:29.267 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:45:29.339 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:45:29.424 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:45:29.561 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:45:30.527 [INFO ] [LoginPage] Verifying logged-in account {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:45:30.661 [INFO ] [Hooks] END: Grant account access to a registered customer with valid credentials {"status":"PASSED"}
+2026-10-26 20:45:31.715 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:45:31.717 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:45:56.476 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:45:57.519 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:45:57.588 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:45:57.667 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:45:57.835 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:45:58.573 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:45:59.650 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:45:59.653 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:46:23.511 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:46:24.618 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:46:24.701 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:46:24.788 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:46:24.957 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:46:25.724 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:46:26.756 [INFO ] [Scenario] START: Allow a customer to access the password recovery process
+2026-10-26 20:46:26.759 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:46:59.761 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:47:01.385 [INFO ] [Hooks] FAILED: Allow a customer to access the password recovery process {"status":"FAILED"}
+2026-10-26 20:47:01.388 [ERROR] [Hooks] Reason: TypeError: Cannot read properties of undefined (reading 'expectOnRecoveryPage') |     at CustomWorld.<anonymous> (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\features\login\login.steps.ts:104:37)
+2026-10-26 20:47:01.556 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/passwordrecovery"}
+2026-10-26 20:47:02.953 [INFO ] [Scenario] START: Submit a password recovery request for a registered customer
+2026-10-26 20:47:02.956 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:47:28.687 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:47:32.086 [INFO ] [Hooks] FAILED: Submit a password recovery request for a registered customer {"status":"FAILED"}
+2026-10-26 20:47:32.093 [ERROR] [Hooks] Reason: TypeError: Cannot read properties of undefined (reading 'expectOnRecoveryPage') |     at CustomWorld.<anonymous> (C:\Users\N.Ncongwane\Downloads\adaptive-commerce-qa-starter\features\login\login.steps.ts:91:37)
+2026-10-26 20:47:32.281 [ERROR] [Hooks] Screenshot captured for failed scenario {"url":"https://demowebshop.tricentis.com/passwordrecovery"}
+2026-10-26 20:54:53.647 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 20:54:53.666 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:55:17.926 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:55:19.127 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:55:19.216 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:55:19.284 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:55:19.424 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:55:21.683 [INFO ] [LoginPage] Verifying logged-in account {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:55:21.856 [INFO ] [Hooks] END: Grant account access to a registered customer with valid credentials {"status":"PASSED"}
+2026-10-26 20:55:22.993 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:55:22.999 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:55:51.232 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:55:52.485 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:55:52.564 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:55:52.659 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:55:52.806 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:55:53.619 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:55:54.631 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 20:55:54.634 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:56:19.768 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:56:20.818 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:56:20.897 [INFO ] [LoginPage] Entering login password
+2026-10-26 20:56:20.973 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 20:56:21.105 [INFO ] [LoginPage] Submitting login form
+2026-10-26 20:56:22.910 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 20:56:23.818 [INFO ] [Scenario] START: Allow a customer to access the password recovery process
+2026-10-26 20:56:23.823 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:56:51.725 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:56:53.316 [INFO ] [Hooks] END: Allow a customer to access the password recovery process {"status":"PASSED"}
+2026-10-26 20:56:54.353 [INFO ] [Scenario] START: Submit a password recovery request for a registered customer
+2026-10-26 20:56:54.359 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 20:57:21.255 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 20:57:23.091 [INFO ] [PasswordRecoveryPage] Submitting password recovery request {"email":"n.ncongwane@gmail.com"}
+2026-10-26 20:57:24.125 [INFO ] [Hooks] END: Submit a password recovery request for a registered customer {"status":"PASSED"}

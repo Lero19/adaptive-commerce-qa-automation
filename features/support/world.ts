@@ -3,6 +3,7 @@ import { Browser, BrowserContext, Page } from '@playwright/test';
 import { RegisterPage, RegistrationUser } from '../../src/pages/register.page';
 import { LoginPage } from '../../src/pages/login.page';
 import { HomePage } from '../../src/pages/home.page';
+import { PasswordRecoveryPage } from '../../src/pages/password-recovery-page';
 import { HealingReporter } from '../../src/resilience/healing-reporter';
 
 export class CustomWorld extends World {
@@ -11,6 +12,7 @@ export class CustomWorld extends World {
   page!: Page;
   registerPage!: RegisterPage;
   loginPage!: LoginPage;
+  passwordRecoveryPage!: PasswordRecoveryPage;
   homePage!: HomePage;
   healingReporter = new HealingReporter();
   scenarioId = '';

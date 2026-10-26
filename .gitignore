@@ -9,3 +9,10 @@ playwright-report/
 .env.*
 !.env.example
 "@ | Set-Content .gitignore
+.env
+.env
+logs/
+reports/
+test-results/
+allure-results/
+allure-report/
