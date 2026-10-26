@@ -91,7 +91,7 @@ pipeline {
                 if (fileExists('allure-results')) {
                     try {
                         allure([
-                            commandline: 'allure-2.46.1',
+                            commandline: 'Allure',
                             includeProperties: false,
                             results: [[path: 'allure-results']]
                         ])
