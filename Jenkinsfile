@@ -85,31 +85,18 @@ pipeline {
             }
         }
     }
-
-    post {
+        post {
         always {
             script {
                 if (fileExists('allure-results')) {
-                    // Generate the report with the project's own allure-commandline
-                    // (same version as local), instead of the Jenkins plugin's version.
                     try {
-                        bat 'npx allure --version'
-                        bat 'npm run allure:generate'
-                    } catch (err) {
-                        echo "Allure report generation failed: ${err}"
-                    }
-
-                    if (fileExists('allure-report/index.html')) {
-                        publishHTML(target: [
-                            reportDir: 'allure-report',
-                            reportFiles: 'index.html',
-                            reportName: 'Allure Report',
-                            keepAll: true,
-                            allowMissing: true,
-                            alwaysLinkToLastBuild: true
+                        allure([
+                            commandline: 'allure-2.46.1',
+                            includeProperties: false,
+                            results: [[path: 'allure-results']]
                         ])
-                    } else {
-                        echo 'allure-report/index.html was not created.'
+                    } catch (err) {
+                        echo "Allure publishing failed: ${err}"
                     }
                 } else {
                     echo 'No Allure results were generated.'
@@ -117,7 +104,7 @@ pipeline {
             }
 
             archiveArtifacts(
-                artifacts: 'allure-results/**,allure-report/**',
+                artifacts: 'allure-results/**',
                 allowEmptyArchive: true,
                 fingerprint: true
             )
