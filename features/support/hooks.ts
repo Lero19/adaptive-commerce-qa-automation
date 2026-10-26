@@ -1,40 +1,113 @@
-import { Before, After, BeforeAll, AfterAll, setDefaultTimeout } from '@cucumber/cucumber';
-import { chromium, firefox, webkit, BrowserType } from '@playwright/test';
+import {
+  Before,
+  After,
+  BeforeAll,
+  AfterAll,
+  setDefaultTimeout
+} from '@cucumber/cucumber';
+
+import {
+  chromium,
+  firefox,
+  webkit,
+  BrowserType
+} from '@playwright/test';
+
+import * as allure from 'allure-js-commons';
 import { environment } from '../../config/environment';
 import { CustomWorld } from './world';
+
 const { RegisterPage } = require('../../src/pages/register.page');
 const { LoginPage } = require('../../src/pages/login.page');
 const { HomePage } = require('../../src/pages/home.page');
 const { PasswordRecoveryPage } = require('../../src/pages/password-recovery-page');
+
 import fs from 'node:fs';
 import path from 'node:path';
 
 setDefaultTimeout(45_000);
 
-const browserTypes: Record<string, BrowserType> = { chromium, firefox, webkit };
+const browserTypes: Record<string, BrowserType> = {
+  chromium,
+  firefox,
+  webkit
+};
+
 let sharedBrowser: Awaited<ReturnType<BrowserType['launch']>>;
 
 BeforeAll(async function () {
   fs.mkdirSync('reports', { recursive: true });
+
   const type = browserTypes[environment.browser];
-  if (!type) throw new Error(`Unsupported BROWSER "${environment.browser}". Use chromium, firefox, or webkit.`);
-  sharedBrowser = await type.launch({ headless: environment.headless, 
-    args: ['--start-maximized']});
+
+  if (!type) {
+    throw new Error(
+      `Unsupported BROWSER "${environment.browser}". Use chromium, firefox, or webkit.`
+    );
+  }
+
+  sharedBrowser = await type.launch({
+    headless: environment.headless,
+    args: ['--start-maximized']
+  });
 });
 
 Before(async function (this: CustomWorld, scenario) {
-  this.scenarioId = scenario.pickle.name.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+  const tags = scenario.pickle.tags.map(tag =>
+    tag.name.replace(/^@/, '')
+  );
+
+  this.scenarioId = scenario.pickle.name
+    .replace(/[^a-z0-9]+/gi, '-')
+    .toLowerCase();
+
+  // Assign explicit Allure suite labels from Cucumber tags.
+  if (tags.includes('registration')) {
+    await allure.parentSuite('Web Shop');
+    await allure.suite('Registration');
+    await allure.subSuite('Customer Registration');
+  } else if (tags.includes('password-recovery')) {
+    await allure.parentSuite('Web Shop');
+    await allure.suite('Authentication');
+    await allure.subSuite('Password Recovery');
+  } else if (tags.includes('authentication') || tags.includes('login')) {
+    await allure.parentSuite('Web Shop');
+    await allure.suite('Authentication');
+    await allure.subSuite('Login');
+  }
+
   this.browser = sharedBrowser;
   this.context = await this.browser.newContext();
   this.page = await this.context.newPage();
-  this.page.setDefaultTimeout(environment.defaultTimeoutMs);
-  await this.context.tracing.start({ screenshots: true, snapshots: true, sources: true });
-  this.registerPage = new RegisterPage(this.page, this.healingReporter);
-  this.loginPage = new LoginPage(this.page, this.healingReporter);
-  this.homePage = new HomePage(this.page, this.healingReporter);
-  this.passwordRecoveryPage = new PasswordRecoveryPage(this.page, this.healingReporter);
-});
 
+  this.page.setDefaultTimeout(environment.defaultTimeoutMs);
+
+  await this.context.tracing.start({
+    screenshots: true,
+    snapshots: true,
+    sources: true
+  });
+
+  this.registerPage = new RegisterPage(
+    this.page,
+    this.healingReporter
+  );
+
+  this.loginPage = new LoginPage(
+    this.page,
+    this.healingReporter
+  );
+
+  this.homePage = new HomePage(
+    this.page,
+    this.healingReporter
+  );
+
+  this.passwordRecoveryPage = new PasswordRecoveryPage(
+    this.page,
+    this.healingReporter
+  );
+});
 
 After(async function (this: CustomWorld, scenario) {
   const dir = path.join(
@@ -46,7 +119,6 @@ After(async function (this: CustomWorld, scenario) {
     if (this.page) {
       fs.mkdirSync(dir, { recursive: true });
 
-      // Capture the final browser state for both passed and failed tests.
       const screenshot = await this.page
         .screenshot({
           fullPage: true,
@@ -58,17 +130,14 @@ After(async function (this: CustomWorld, scenario) {
         });
 
       if (screenshot) {
-        // Attach the screenshot to the Cucumber result for Allure.
         await this.attach(screenshot, 'image/png');
 
-        // Save a copy locally as well.
         fs.writeFileSync(
           path.join(dir, 'final.png'),
           screenshot
         );
       }
 
-      // Preserve traces for failed scenarios.
       if (scenario.result?.status === 'FAILED') {
         const tracePath = path.join(dir, 'trace.zip');
 
@@ -103,7 +172,6 @@ After(async function (this: CustomWorld, scenario) {
     }
   }
 });
-
 
 AfterAll(async function () {
   await sharedBrowser?.close();

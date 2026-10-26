@@ -1341,3 +1341,179 @@
 2026-10-26 20:57:21.255 [INFO ] [LoginPage] Opening login form from the header
 2026-10-26 20:57:23.091 [INFO ] [PasswordRecoveryPage] Submitting password recovery request {"email":"n.ncongwane@gmail.com"}
 2026-10-26 20:57:24.125 [INFO ] [Hooks] END: Submit a password recovery request for a registered customer {"status":"PASSED"}
+2026-10-26 21:47:09.665 [INFO ] [Scenario] START: Register a new customer successfully
+2026-10-26 21:47:09.681 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:47:33.641 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:47:34.741 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:47:34.745 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:47:34.847 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:47:34.877 [INFO ] [RegisterPage] Registering a new customer {"gender":"male","email":"qa.1793044054877.tdmkvv@example.com"}
+2026-10-26 21:47:34.880 [INFO ] [RegisterPage] Selecting gender: male
+2026-10-26 21:47:35.030 [INFO ] [RegisterPage] Entering first name: Ezequiel
+2026-10-26 21:47:35.146 [INFO ] [RegisterPage] Entering last name: Bartoletti
+2026-10-26 21:47:35.248 [INFO ] [RegisterPage] Entering email: qa.1793044054877.tdmkvv@example.com
+2026-10-26 21:47:35.362 [INFO ] [RegisterPage] Entering password: ****************
+2026-10-26 21:47:35.463 [INFO ] [RegisterPage] Entering confirm password: ****************
+2026-10-26 21:47:35.681 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:47:37.042 [INFO ] [RegisterPage] Verifying the "Your registration completed" message
+2026-10-26 21:47:37.107 [INFO ] [RegisterPage] Registration completed successfully
+2026-10-26 21:47:37.114 [INFO ] [HomePage] Verifying the user is logged in as qa.1793044054877.tdmkvv@example.com
+2026-10-26 21:47:37.192 [INFO ] [HomePage] User is logged in: account email and Log out link are shown
+2026-10-26 21:47:37.195 [INFO ] [Hooks] END: Register a new customer successfully {"status":"PASSED"}
+2026-10-26 21:47:38.261 [INFO ] [Scenario] START: Register a new customer successfully
+2026-10-26 21:47:38.264 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:48:01.413 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:48:02.160 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:48:02.164 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:48:02.242 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:48:02.247 [INFO ] [RegisterPage] Registering a new customer {"gender":"female","email":"qa.1793044082247.hvts2f@example.com"}
+2026-10-26 21:48:02.249 [INFO ] [RegisterPage] Selecting gender: female
+2026-10-26 21:48:02.370 [INFO ] [RegisterPage] Entering first name: Claude
+2026-10-26 21:48:02.480 [INFO ] [RegisterPage] Entering last name: Kilback
+2026-10-26 21:48:02.581 [INFO ] [RegisterPage] Entering email: qa.1793044082247.hvts2f@example.com
+2026-10-26 21:48:02.688 [INFO ] [RegisterPage] Entering password: ****************
+2026-10-26 21:48:02.829 [INFO ] [RegisterPage] Entering confirm password: ****************
+2026-10-26 21:48:02.965 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:48:04.486 [INFO ] [RegisterPage] Verifying the "Your registration completed" message
+2026-10-26 21:48:04.613 [INFO ] [RegisterPage] Registration completed successfully
+2026-10-26 21:48:04.617 [INFO ] [HomePage] Verifying the user is logged in as qa.1793044082247.hvts2f@example.com
+2026-10-26 21:48:04.684 [INFO ] [HomePage] User is logged in: account email and Log out link are shown
+2026-10-26 21:48:04.687 [INFO ] [Hooks] END: Register a new customer successfully {"status":"PASSED"}
+2026-10-26 21:48:05.623 [INFO ] [Scenario] START: Register a new customer successfully
+2026-10-26 21:48:05.626 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:48:29.151 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:48:29.868 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:48:29.871 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:48:29.949 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:48:29.954 [INFO ] [RegisterPage] Registering a new customer {"gender":"female","email":"qa.1793044109954.33afgq@example.com"}
+2026-10-26 21:48:29.957 [INFO ] [RegisterPage] Selecting gender: female
+2026-10-26 21:48:30.093 [INFO ] [RegisterPage] Entering first name: Thandi
+2026-10-26 21:48:30.190 [INFO ] [RegisterPage] Entering last name: Mokoena
+2026-10-26 21:48:30.285 [INFO ] [RegisterPage] Entering email: qa.1793044109954.33afgq@example.com
+2026-10-26 21:48:30.383 [INFO ] [RegisterPage] Entering password: ***********
+2026-10-26 21:48:30.523 [INFO ] [RegisterPage] Entering confirm password: ***********
+2026-10-26 21:48:30.653 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:48:31.979 [INFO ] [RegisterPage] Verifying the "Your registration completed" message
+2026-10-26 21:48:32.085 [INFO ] [RegisterPage] Registration completed successfully
+2026-10-26 21:48:32.091 [INFO ] [HomePage] Verifying the user is logged in as qa.1793044109954.33afgq@example.com
+2026-10-26 21:48:32.156 [INFO ] [HomePage] User is logged in: account email and Log out link are shown
+2026-10-26 21:48:32.158 [INFO ] [Hooks] END: Register a new customer successfully {"status":"PASSED"}
+2026-10-26 21:48:33.211 [INFO ] [Scenario] START: Reject a registration with missing required fields
+2026-10-26 21:48:33.215 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:48:57.410 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:48:58.261 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:48:58.264 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:48:58.347 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:48:58.350 [INFO ] [RegisterPage] Registering a new customer {"gender":"male","email":"qa.1793044138350.woynmh@example.com"}
+2026-10-26 21:48:58.354 [INFO ] [RegisterPage] Selecting gender: male
+2026-10-26 21:48:58.493 [INFO ] [RegisterPage] Leaving first name blank
+2026-10-26 21:48:58.495 [INFO ] [RegisterPage] Entering last name: Schiller
+2026-10-26 21:48:58.600 [INFO ] [RegisterPage] Entering email: qa.1793044138350.woynmh@example.com
+2026-10-26 21:48:58.702 [INFO ] [RegisterPage] Entering password: ****************
+2026-10-26 21:48:58.867 [INFO ] [RegisterPage] Entering confirm password: ****************
+2026-10-26 21:48:59.001 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:48:59.120 [INFO ] [RegisterPage] Verifying validation message: "First name is required."
+2026-10-26 21:48:59.192 [INFO ] [RegisterPage] Validation message verified: "First name is required."
+2026-10-26 21:48:59.195 [INFO ] [Hooks] END: Reject a registration with missing required fields {"status":"PASSED"}
+2026-10-26 21:49:00.260 [INFO ] [Scenario] START: Reject a registration with missing required fields
+2026-10-26 21:49:00.264 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:49:23.501 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:49:24.233 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:49:24.236 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:49:24.316 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:49:24.320 [INFO ] [RegisterPage] Registering a new customer {"gender":"female","email":"qa.1793044164320.1o7fnx@example.com"}
+2026-10-26 21:49:24.323 [INFO ] [RegisterPage] Selecting gender: female
+2026-10-26 21:49:24.453 [INFO ] [RegisterPage] Entering first name: Russ
+2026-10-26 21:49:24.552 [INFO ] [RegisterPage] Leaving last name blank
+2026-10-26 21:49:24.554 [INFO ] [RegisterPage] Entering email: qa.1793044164320.1o7fnx@example.com
+2026-10-26 21:49:24.655 [INFO ] [RegisterPage] Entering password: ****************
+2026-10-26 21:49:24.743 [INFO ] [RegisterPage] Entering confirm password: ****************
+2026-10-26 21:49:24.866 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:49:24.978 [INFO ] [RegisterPage] Verifying validation message: "Last name is required."
+2026-10-26 21:49:25.056 [INFO ] [RegisterPage] Validation message verified: "Last name is required."
+2026-10-26 21:49:25.059 [INFO ] [Hooks] END: Reject a registration with missing required fields {"status":"PASSED"}
+2026-10-26 21:49:26.013 [INFO ] [Scenario] START: Reject a registration with missing required fields
+2026-10-26 21:49:26.017 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:49:53.481 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:49:54.168 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:49:54.172 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:49:54.245 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:49:54.248 [INFO ] [RegisterPage] Registering a new customer {"gender":"male","email":""}
+2026-10-26 21:49:54.251 [INFO ] [RegisterPage] Selecting gender: male
+2026-10-26 21:49:54.370 [INFO ] [RegisterPage] Entering first name: Cayla
+2026-10-26 21:49:54.469 [INFO ] [RegisterPage] Entering last name: Mante
+2026-10-26 21:49:54.570 [INFO ] [RegisterPage] Leaving email blank
+2026-10-26 21:49:54.573 [INFO ] [RegisterPage] Entering password: ****************
+2026-10-26 21:49:54.660 [INFO ] [RegisterPage] Entering confirm password: ****************
+2026-10-26 21:49:54.809 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:49:54.930 [INFO ] [RegisterPage] Verifying validation message: "Email is required."
+2026-10-26 21:49:54.996 [INFO ] [RegisterPage] Validation message verified: "Email is required."
+2026-10-26 21:49:54.998 [INFO ] [Hooks] END: Reject a registration with missing required fields {"status":"PASSED"}
+2026-10-26 21:49:55.889 [INFO ] [Scenario] START: Reject a registration with missing required fields
+2026-10-26 21:49:55.892 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:50:19.637 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:50:20.641 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:50:20.644 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:50:20.728 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:50:20.732 [INFO ] [RegisterPage] Registering a new customer {"gender":"female","email":"qa.1793044220732.cjimn3@example.com"}
+2026-10-26 21:50:20.734 [INFO ] [RegisterPage] Selecting gender: female
+2026-10-26 21:50:20.849 [INFO ] [RegisterPage] Entering first name: Nathan
+2026-10-26 21:50:20.936 [INFO ] [RegisterPage] Entering last name: Carroll
+2026-10-26 21:50:21.031 [INFO ] [RegisterPage] Entering email: qa.1793044220732.cjimn3@example.com
+2026-10-26 21:50:21.129 [INFO ] [RegisterPage] Leaving password blank
+2026-10-26 21:50:21.131 [INFO ] [RegisterPage] Leaving confirm password blank
+2026-10-26 21:50:21.177 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:50:21.279 [INFO ] [RegisterPage] Verifying validation message: "Password is required."
+2026-10-26 21:50:21.346 [INFO ] [RegisterPage] Validation message verified: "Password is required."
+2026-10-26 21:50:21.348 [INFO ] [Hooks] END: Reject a registration with missing required fields {"status":"PASSED"}
+2026-10-26 21:50:22.314 [INFO ] [Scenario] START: Reject mismatched passwords
+2026-10-26 21:50:22.318 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:50:45.787 [INFO ] [HomePage] Clicking the Register link in the header
+2026-10-26 21:50:46.614 [INFO ] [HomePage] Redirected to the registration page {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:50:46.617 [INFO ] [RegisterPage] Verifying the registration page is displayed
+2026-10-26 21:50:46.719 [INFO ] [RegisterPage] Registration page is displayed {"url":"https://demowebshop.tricentis.com/register"}
+2026-10-26 21:50:46.723 [INFO ] [RegisterPage] Registering a new customer {"gender":"male","email":"qa.1793044246723.9byytz@example.com"}
+2026-10-26 21:50:46.724 [INFO ] [RegisterPage] Selecting gender: male
+2026-10-26 21:50:46.834 [INFO ] [RegisterPage] Entering first name: Emilia
+2026-10-26 21:50:46.920 [INFO ] [RegisterPage] Entering last name: Mosciski
+2026-10-26 21:50:47.023 [INFO ] [RegisterPage] Entering email: qa.1793044246723.9byytz@example.com
+2026-10-26 21:50:47.116 [INFO ] [RegisterPage] Entering password: ****************
+2026-10-26 21:50:47.204 [INFO ] [RegisterPage] Entering confirm password: *************
+2026-10-26 21:50:47.324 [INFO ] [RegisterPage] Clicking the Register button
+2026-10-26 21:50:47.419 [INFO ] [RegisterPage] Verifying validation message: "The password and confirmation password do not match."
+2026-10-26 21:50:47.485 [INFO ] [RegisterPage] Validation message verified: "The password and confirmation password do not match."
+2026-10-26 21:50:47.489 [INFO ] [Hooks] END: Reject mismatched passwords {"status":"PASSED"}
+2026-10-26 21:51:37.858 [INFO ] [Scenario] START: Grant account access to a registered customer with valid credentials
+2026-10-26 21:51:37.880 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:52:00.994 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 21:52:01.962 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 21:52:02.040 [INFO ] [LoginPage] Entering login password
+2026-10-26 21:52:02.120 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 21:52:02.260 [INFO ] [LoginPage] Submitting login form
+2026-10-26 21:52:03.214 [INFO ] [LoginPage] Verifying logged-in account {"email":"n.ncongwane@gmail.com"}
+2026-10-26 21:52:03.347 [INFO ] [Hooks] END: Grant account access to a registered customer with valid credentials {"status":"PASSED"}
+2026-10-26 21:52:04.414 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 21:52:04.418 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:52:27.998 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 21:52:28.996 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 21:52:29.076 [INFO ] [LoginPage] Entering login password
+2026-10-26 21:52:29.152 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 21:52:29.285 [INFO ] [LoginPage] Submitting login form
+2026-10-26 21:52:29.961 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 21:52:30.947 [INFO ] [Scenario] START: Protect customer accounts against invalid authentication attempts
+2026-10-26 21:52:30.950 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:52:53.820 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 21:52:54.685 [INFO ] [LoginPage] Entering login email {"email":"n.ncongwane@gmail.com"}
+2026-10-26 21:52:54.762 [INFO ] [LoginPage] Entering login password
+2026-10-26 21:52:54.836 [INFO ] [LoginPage] Login credentials filled successfully
+2026-10-26 21:52:54.941 [INFO ] [LoginPage] Submitting login form
+2026-10-26 21:52:55.577 [INFO ] [Hooks] END: Protect customer accounts against invalid authentication attempts {"status":"PASSED"}
+2026-10-26 21:52:56.538 [INFO ] [Scenario] START: Allow a customer to access the password recovery process
+2026-10-26 21:52:56.541 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:53:20.397 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 21:53:21.863 [INFO ] [Hooks] END: Allow a customer to access the password recovery process {"status":"PASSED"}
+2026-10-26 21:53:22.715 [INFO ] [Scenario] START: Submit a password recovery request for a registered customer
+2026-10-26 21:53:22.718 [INFO ] [HomePage] Opening the home page: https://demowebshop.tricentis.com
+2026-10-26 21:53:45.935 [INFO ] [LoginPage] Opening login form from the header
+2026-10-26 21:53:47.570 [INFO ] [PasswordRecoveryPage] Submitting password recovery request {"email":"n.ncongwane@gmail.com"}
+2026-10-26 21:53:48.320 [INFO ] [Hooks] END: Submit a password recovery request for a registered customer {"status":"PASSED"}
