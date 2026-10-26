@@ -1,0 +1,11 @@
+@"
+node_modules/
+dist/
+allure-results/
+allure-report/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+"@ | Set-Content .gitignore
