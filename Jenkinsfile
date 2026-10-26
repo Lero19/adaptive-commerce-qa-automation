@@ -56,6 +56,11 @@ pipeline {
                 bat 'npm run test:registration'
             }
         }
+        stage('Login & Authentication Tests') {
+            steps {
+                bat 'npm run test:login'
+            }
+        }
     }
 
     post {
