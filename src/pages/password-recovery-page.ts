@@ -6,6 +6,8 @@ import type { LocatorStrategy } from '../resilience/resilient-locator';
 import { findResilient } from '../resilience/resilient-locator';
 import { Logger } from '../../utils/logger';
 
+const defaultTimeout = 10_000;
+
 export class PasswordRecoveryPage {
   private readonly log = Logger.for('PasswordRecoveryPage');
   private readonly page: Page;
@@ -70,6 +72,6 @@ export class PasswordRecoveryPage {
       '.result, .validation-summary-errors, .field-validation-error, .message-error'
     ).filter({ hasText: /\S/ }).first();
 
-    await expect(feedback).toBeVisible({ timeout: 10_000 });
+    await expect(feedback).toBeVisible({ timeout: defaultTimeout });
   }
 }

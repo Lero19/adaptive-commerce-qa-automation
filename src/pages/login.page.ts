@@ -6,6 +6,8 @@ import type { LocatorStrategy } from '../resilience/resilient-locator';
 import { findResilient } from '../resilience/resilient-locator';
 import { Logger } from '../../utils/logger';
 
+const defaultTimeout = 10_000;
+
 export class LoginPage {
   private readonly log = Logger.for('LoginPage');
   private readonly page: Page;
@@ -29,7 +31,7 @@ export class LoginPage {
 
   private readonly emailField = {
     name: 'Login email',
-    primary: { type: 'id', value: 'Email' } as LocatorStrategy,
+    primary: { type: 'id', value: 'Email-2' } as LocatorStrategy,
     fallbacks: [
       { type: 'name', value: 'Email' },
       { type: 'css', value: 'input.email' },
@@ -164,7 +166,7 @@ export class LoginPage {
       '.validation-summary-errors, .message-error, .field-validation-error'
     ).filter({ hasText: /\S/ }).first();
 
-    await expect(error).toBeVisible({ timeout: 10_000 });
+    await expect(error).toBeVisible({ timeout: defaultTimeout });
   }
 
   async openPasswordRecovery(): Promise<void> {

@@ -1,5 +1,7 @@
 import 'dotenv/config';
 
+const default_timeout = 60_000;
+
 function bool(value: string | undefined, fallback: boolean): boolean {
   if (value === undefined) return fallback;
   return value.toLowerCase() === 'true';
@@ -13,7 +15,7 @@ export const environment = {
 
   headless: bool(process.env.HEADLESS, false),
   browser: process.env.BROWSER ?? 'chromium',
-  defaultTimeoutMs: Number(process.env.DEFAULT_TIMEOUT_MS ?? 60_000),
+  defaultTimeoutMs: Number(process.env.DEFAULT_TIMEOUT_MS ?? default_timeout),
 
   // Used for headless runs (e.g. Jenkins) and for non-Chromium browsers, which ignore --start-maximized.
   viewportWidth: Number(process.env.VIEWPORT_WIDTH ?? 1920),

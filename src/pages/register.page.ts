@@ -5,6 +5,9 @@ import type { LocatorStrategy } from '../../src/resilience/resilient-locator';
 import { findResilient } from '../../src/resilience/resilient-locator';
 import { Logger } from '../../utils/logger';
 
+const defaultTimeout = 10_000;
+const medium_timeout = 15_000;
+
 export type Gender = 'male' | 'female';
 
 export interface RegistrationUser {
@@ -154,7 +157,7 @@ export class RegisterPage {
   async expectSuccessfulRegistration(): Promise<void> {
     this.log.info('Verifying the "Your registration completed" message');
     await expect(this.page.locator('.result'))
-      .toContainText('Your registration completed', { timeout: 15_000 });
+      .toContainText('Your registration completed', { timeout: medium_timeout });
     this.log.info('Registration completed successfully');
   }
   
@@ -191,11 +194,11 @@ export class RegisterPage {
         .filter({ hasText: message })
         .first();
 
-      await expect(error).toBeVisible({ timeout: 10_000 });
+      await expect(error).toBeVisible({ timeout: defaultTimeout });
       await expect(error).toContainText(message);
     } else if (selector) {
       const error = this.page.locator(selector);
-      await expect(error).toBeVisible({ timeout: 10_000 });
+      await expect(error).toBeVisible({ timeout: defaultTimeout });
       await expect(error).toContainText(message);
     } else {
       throw new Error(`No validation selector configured for: "${message}"`);

@@ -5,6 +5,8 @@ import { environment } from '../../config/environment';
 import { findResilient } from '../resilience/resilient-locator';
 import { Logger } from '../../utils/logger';
 
+const defaultTimeout = 60_000;
+
 export class HomePage {
   private readonly log = Logger.for('HomePage');
   private readonly page: Page;
@@ -17,7 +19,7 @@ export class HomePage {
 
   async navigate(): Promise<void> {
     this.log.info(`Opening the home page: ${environment.baseUrl}`);
-    await this.page.goto(environment.baseUrl, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+    await this.page.goto(environment.baseUrl, { waitUntil: 'domcontentloaded', timeout: defaultTimeout });
   }
 
   /** The nav link has no id, so the most specific stable hook (class within header) is primary. */
